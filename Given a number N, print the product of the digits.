@@ -1,0 +1,15 @@
+Given a number N, print the product of the digits.
+Input Size : N <= 100000000000
+Sample Testcase :
+INPUT
+2143
+OUTPUT
+24
+
+CODE:
+
+digits = str(input())
+product = 1
+for digit in digits:
+    product  *=  int(digit)
+print(product) 
