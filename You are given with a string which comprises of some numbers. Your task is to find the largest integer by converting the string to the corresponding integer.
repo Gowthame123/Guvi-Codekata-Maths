@@ -1,0 +1,39 @@
+You are given with a string which comprises of some numbers. Your task is to find the largest integer by converting the string to the corresponding integer.
+
+Input Description:
+First line contains n denoting number of Test Cases. The first and only Line of testcase has the string
+
+Output Description:
+Print the largest number
+
+Sample Input :
+ I was born on 12 october 1998.
+Sample Output :
+1998
+
+CODE:
+
+def great(a, b):
+    if a>b:
+        return a
+    else:return b 
+    
+i = list(map(str, input().split()))
+l = []
+for char in i:
+    if '.' in char:
+        char = char.replace('.', '')
+        l.append(char)
+    else:l.append(char)
+digit = '' 
+
+for char in l:
+    if char.isdigit():
+        if len(digit) == len(char):
+            digit = great(digit, char)
+            
+        if len(digit) < len(char):
+            digit = char
+    
+print(digit)            
+
